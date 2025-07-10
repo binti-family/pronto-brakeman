@@ -13,7 +13,6 @@ module Pronto
 
       output = ::Brakeman.run(app_path: repo_path,
                               output_formats: [:to_s],
-                              only_files: files,
                               run_all_checks: run_all_checks?,
                               ignore_file: ignore_file)
        messages_for(patches, output).compact
